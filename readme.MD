@@ -9,7 +9,7 @@
 
 ### Amy Cardenas Silva
 - Rol: Scrum Master
-- Correo: milikrans05@gmail.com
+- Correo: amycardenas321@aragon.unam.mx
 
 ### Ricardo Martínez Morales
 - Rol: Team Scrum
