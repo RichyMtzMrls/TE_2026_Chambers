@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrones de Diseño</title>
+</head>
+<body>
+
+  <header>
+    <p>Temas Especiasles de Computacion</p>
+    <hr>
+  </header>
+
+  <main>
+
+    <h1>Patrones de Diseño</h1>
+    <p>Soluciones reutilizables, probadas en el tiempo, para los problemas recurrentes que surgen durante el diseño de software orientado a objetos.</p>
+
+    <hr>
+
+    <nav>
+      <p><strong>Contenido:</strong></p>
+      <ol>
+        <li><a href="#definicion">Definición</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#patrones">Patrones principales</a></li>
+        <li><a href="#ejemplo">Ejemplo práctico</a></li>
+        <li><a href="#principios">Principios SOLID</a></li>
+      </ol>
+    </nav>
+
+    <hr>
+
+    <section id="definicion">
+      <h2>1. ¿Qué es un patrón de diseño?</h2>
+      <p>Un <strong>patrón de diseño</strong> es una solución general y reutilizable a un problema que se repite frecuentemente en el diseño de software. No es un diseño terminado que pueda transformarse directamente en código; es una descripción o plantilla de cómo resolver un problema que puede usarse en muchas situaciones diferentes.</p>
+      <p>Los patrones de diseño son las mejores prácticas formalizadas que el programador puede utilizar para resolver problemas comunes cuando diseña una aplicación o sistema. Aceleran el proceso de desarrollo al proporcionar paradigmas probados y testeados.</p>
+      <p>Cada patrón consta de cuatro elementos esenciales:</p>
+      <ul>
+        <li><strong>Nombre:</strong> identifica el patrón de forma concisa.</li>
+        <li><strong>Problema:</strong> describe cuándo aplicar el patrón.</li>
+        <li><strong>Solución:</strong> describe los elementos que forman el diseño.</li>
+        <li><strong>Consecuencias:</strong> resultados y compromisos de aplicar el patrón.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="historia">
+      <h2>2. Origen e historia</h2>
+      <p>El concepto fue introducido originalmente por el arquitecto <strong>Christopher Alexander</strong> en su obra <em>A Pattern Language</em> (1977), donde documentó patrones para el diseño de edificios y ciudades.</p>
+      <blockquote>
+        "Un patrón describe un problema que ocurre una y otra vez en nuestro entorno, y luego describe el núcleo de la solución a ese problema."
+        <br><cite>— Christopher Alexander, 1977</cite>
+      </blockquote>
+      <p>En 1994, <strong>Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides</strong> —conocidos colectivamente como el <em>Gang of Four (GoF)</em>— publicaron <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>, que cataloga 23 patrones clásicos. Este libro estableció el vocabulario común que los desarrolladores usan hasta hoy.</p>
+    </section>
+
+    <hr>
+
+    <section id="categorias">
+      <h2>3. Las tres categorías</h2>
+      <p>Los 23 patrones clásicos del GoF se agrupan en tres familias según su propósito:</p>
+
+      <h3>Creacionales</h3>
+      <p>Gestionan los mecanismos de creación de objetos, buscando crearlos de manera adecuada a la situación. Abstraen el proceso de instanciación y ayudan a hacer el sistema independiente de cómo se crean sus objetos.</p>
+
+      <h3>Estructurales</h3>
+      <p>Se ocupan de la composición de clases y objetos para formar estructuras más grandes y flexibles. Describen cómo combinar clases y objetos para obtener nuevas funcionalidades.</p>
+
+      <h3>De comportamiento</h3>
+      <p>Identifican patrones de comunicación y distribución de responsabilidades entre objetos en un sistema. Se centran en los algoritmos y la asignación de responsabilidades entre objetos.</p>
+    </section>
+
+    <hr>
+
+    <section id="patrones">
+      <h2>4. Patrones principales</h2>
+
+      <h3>Creacionales</h3>
+      <dl>
+        <dt><strong>Singleton</strong></dt>
+        <dd>Garantiza que una clase tenga una única instancia y provee un punto de acceso global a ella.</dd>
+
+        <dt><strong>Factory Method</strong></dt>
+        <dd>Define una interfaz para crear un objeto, pero deja que las subclases decidan qué clase instanciar.</dd>
+
+        <dt><strong>Abstract Factory</strong></dt>
+        <dd>Provee una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas.</dd>
+
+        <dt><strong>Builder</strong></dt>
+        <dd>Separa la construcción de un objeto complejo de su representación, permitiendo el mismo proceso crear distintas representaciones.</dd>
+
+        <dt><strong>Prototype</strong></dt>
+        <dd>Especifica los tipos de objetos a crear usando una instancia prototípica, y crea nuevos objetos copiando ese prototipo.</dd>
+      </dl>
+
+      <h3>Estructurales</h3>
+      <dl>
+        <dt><strong>Adapter</strong></dt>
+        <dd>Permite la colaboración entre objetos con interfaces incompatibles actuando como traductor entre ellos.</dd>
+
+        <dt><strong>Decorator</strong></dt>
+        <dd>Añade responsabilidades a un objeto dinámicamente, como alternativa flexible a la herencia para extender funcionalidades.</dd>
+
+        <dt><strong>Facade</strong></dt>
+        <dd>Provee una interfaz simplificada a un subsistema complejo de clases, ocultando su complejidad interna.</dd>
+
+        <dt><strong>Composite</strong></dt>
+        <dd>Compone objetos en estructuras de árbol para representar jerarquías parte-todo.</dd>
+      </dl>
+
+      <h3>De comportamiento</h3>
+      <dl>
+        <dt><strong>Observer</strong></dt>
+        <dd>Define una dependencia uno-a-muchos de modo que cuando un objeto cambia de estado, todos sus dependientes son notificados automáticamente.</dd>
+
+        <dt><strong>Strategy</strong></dt>
+        <dd>Define una familia de algoritmos, encapsula cada uno y los hace intercambiables entre sí.</dd>
+
+        <dt><strong>Command</strong></dt>
+        <dd>Encapsula una solicitud como un objeto, permitiendo parametrizar clientes con distintas solicitudes, hacer cola o llevar un registro de ellas.</dd>
+
+        <dt><strong>Iterator</strong></dt>
+        <dd>Provee una manera de acceder secuencialmente a los elementos de un objeto agregado sin exponer su representación interna.</dd>
+      </dl>
+    </section>
+
+    <hr>
+
+    <section id="ejemplo">
+      <h2>5. Ejemplo práctico: Singleton</h2>
+      <p>El patrón Singleton asegura que solo exista una instancia de una clase a lo largo de toda la ejecución del programa:</p>
+      <pre><code>
+# Implementación del patrón Singleton en Python
+
+class DatabaseConnection:
+    _instance = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            cls._instance.connect()
+        return cls._instance
+
+    def connect(self):
+        self.connection = "Conexión activa"
+        print("Nueva conexión establecida")
+
+# Uso — ambas variables apuntan a la misma instancia
+db1 = DatabaseConnection()
+db2 = DatabaseConnection()
+
+print(db1 is db2)  # True
+      </code></pre>
+      <p>Sin importar cuántas veces se llame a <code>DatabaseConnection()</code>, siempre se retorna la misma instancia, evitando conexiones duplicadas innecesarias.</p>
+    </section>
+
+    <hr>
+
+    <section id="principios">
+      <h2>6. Principios SOLID relacionados</h2>
+      <p>Los patrones de diseño están profundamente vinculados a los principios SOLID, base de un software bien estructurado:</p>
+      <dl>
+        <dt><strong>S — Single Responsibility</strong></dt>
+        <dd>Una clase debe tener una sola razón para cambiar.</dd>
+
+        <dt><strong>O — Open / Closed</strong></dt>
+        <dd>Abierto para extensión, cerrado para modificación.</dd>
+
+        <dt><strong>L — Liskov Substitution</strong></dt>
+        <dd>Las subclases deben ser sustituibles por sus clases base sin alterar el comportamiento del programa.</dd>
+
+        <dt><strong>I — Interface Segregation</strong></dt>
+        <dd>Prefiere interfaces pequeñas y específicas sobre interfaces grandes y genéricas.</dd>
+
+        <dt><strong>D — Dependency Inversion</strong></dt>
+        <dd>Depende de abstracciones, no de implementaciones concretas.</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <hr>
+
+</body>
+</html>

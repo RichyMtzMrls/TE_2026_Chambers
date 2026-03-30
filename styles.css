@@ -1,0 +1,165 @@
+/* RESETEO Y ESTILOS BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+#encabezado {
+    background-color: #d3d9df;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo--encabezado {
+    display: none; 
+}
+
+.menu--navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu--navegacion a {
+    background-color: #1f364d;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid #000;
+}
+
+/* ÁREA PRINCIPAL Y TÍTULO */
+#body {
+    background-color: #a8d5e2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado--body {
+    background-color: #1f364d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.encabezado--body h1 {
+    font-weight: normal;
+    font-size: 32px;
+}
+
+/* CONTENEDOR TARJETAS */
+.container--tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 60px 40px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* DISEÑO INTERNO TARJETAS*/
+.tarjeta {
+    background-color: #1f364d;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 550px;
+    border: 1px solid #000;
+}
+
+.imagen--tarjeta {
+    flex-shrink: 0;
+}
+
+.imagen--tarjeta img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: black;
+}
+
+.contenido--tarjeta {
+    padding-left: 30px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido--tarjeta h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.contenido--tarjeta p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.contenido--tarjeta a {
+    color: #a8d5e2;
+    text-decoration: underline;
+    font-size: 12px;
+    display: none;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #1f364d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #000;
+}
+
+footer p, footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .container--tarjetas {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+    
+    .tarjeta {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .contenido--tarjeta {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
