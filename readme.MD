@@ -4,7 +4,7 @@
 ## Integrantes
 
 ### Oscar Francisco Huerta Pliego
-- Rol: Product Owner
+- Rol: Team Scrum
 - Correo: oscarhuerta43@aragon.unam.mx
 
 ### Amy Cardenas Silva
@@ -16,7 +16,7 @@
 - Correo: ricardomartinez321@aragon.unam.mx
 
 ### David Guevara Paniagua
-- Rol: Team Scrum
+- Rol: Product Owner
 - Correo: guevara.david1e@gmail.com
 
 ### Alexis Hernandez Zamudio
